@@ -1,8 +1,41 @@
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.layout.GridPane?>
+<?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<GridPane fx:controller="sample.Controller"
-          xmlns:fx="http://javafx.com/fxml" alignment="center" hgap="10" vgap="10">
-</GridPane>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="707.0" style="-fx-background-color: #37493E;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ControllerMain">
+   <children>
+      <VBox minHeight="-Infinity" minWidth="-Infinity" prefHeight="525.0" prefWidth="408.0" style="-fx-background-color: #292C33;" />
+      <Label layoutX="415.0" layoutY="68.0" prefHeight="27.0" prefWidth="152.0" text="Kullanici Adi" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="415.0" layoutY="108.0" prefHeight="25.0" prefWidth="286.0" />
+      <Label layoutX="415.0" layoutY="147.0" prefHeight="27.0" prefWidth="152.0" text="Sifre" textAlignment="CENTER" textFill="WHITE">
+         <font>
+            <Font name="Arial" size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="415.0" layoutY="187.0" prefHeight="25.0" prefWidth="286.0" />
+      <Button layoutX="415.0" layoutY="238.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="286.0" text="Giriş Yap" textAlignment="CENTER">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="415.0" layoutY="292.0" mnemonicParsing="false" onAction="#SignupButtonClicked" prefHeight="42.0" prefWidth="286.0" text="Kayıt Ol" textAlignment="CENTER">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button layoutX="415.0" layoutY="391.0" mnemonicParsing="false" onAction="#DebugButtonClicked" prefHeight="42.0" prefWidth="286.0" text="Debug" textAlignment="CENTER">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+   </children>
+</Pane>
