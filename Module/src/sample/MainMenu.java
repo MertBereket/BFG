@@ -31,4 +31,8 @@ public class MainMenu {
         Pane newLoadedPane =  FXMLLoader.load(getClass().getResource("TvSeriesPane.fxml"));
         secPane.getChildren().add(newLoadedPane);
     }
+    public void loadGamePane (javafx.event.ActionEvent event) throws IOException  {
+        Pane newLoadedPane =  FXMLLoader.load(getClass().getResource("GamesPane.fxml"));
+        secPane.getChildren().add(newLoadedPane);
+    }
 }

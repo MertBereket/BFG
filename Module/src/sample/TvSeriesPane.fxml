@@ -19,7 +19,7 @@
    <children>
       <VBox layoutX="719.0" prefHeight="720.0" prefWidth="275.0" style="-fx-background-color: #C2BF00;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="719.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" prefHeight="42.0" prefWidth="275.0" text="MovieTitle" textFill="WHITE">
+            <Label alignment="CENTER" prefHeight="42.0" prefWidth="275.0" text="SeriesTitle" textFill="WHITE">
                <font>
                   <Font name="Arial" size="25.0" />
                </font>
@@ -64,7 +64,7 @@
                   </ImageView>
                </right>
                <left>
-                  <Label prefHeight="17.0" prefWidth="117.0" text="Director" BorderPane.alignment="CENTER">
+                  <Label prefHeight="17.0" prefWidth="117.0" text="Creator" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
                         <Insets left="10.0" />
                      </BorderPane.margin>
@@ -109,7 +109,7 @@
       <Button layoutX="554.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="ARA" />
       <HBox layoutY="455.0" prefHeight="59.0" prefWidth="720.0" style="-fx-background-color: #C2BF00;">
          <children>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" underline="true">
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="HİKAYE" underline="true">
                <font>
                   <Font size="20.0" />
                </font>
@@ -117,22 +117,22 @@
                   <Insets left="35.0" />
                </HBox.margin>
             </Label>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" underline="true">
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="OYUNCULUK" underline="true">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" underline="true">
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="EDİTÖRLÜK" underline="true">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" underline="true">
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="MÜZİK" underline="true">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" underline="true">
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="ORTALAMA" underline="true">
                <font>
                   <Font size="20.0" />
                </font>
@@ -141,7 +141,7 @@
       </HBox>
       <HBox layoutY="514.0" prefHeight="59.0" prefWidth="720.0" style="-fx-background-color: #C2BF00;">
          <children>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE" underline="true">
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
@@ -149,22 +149,22 @@
                   <Insets left="35.0" />
                </HBox.margin>
             </Label>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE" underline="true">
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE" underline="true">
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE" underline="true">
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE" underline="true">
+            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
