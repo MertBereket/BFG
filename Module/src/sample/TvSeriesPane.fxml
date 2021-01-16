@@ -171,7 +171,7 @@
             </Label>
          </children>
       </HBox>
-      <Button layoutX="609.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="EKLE" />
+      <Button layoutX="609.0" layoutY="-1.0" mnemonicParsing="false" onAction="#AddNewSeriesButtonClicked" prefHeight="25.0" prefWidth="55.0" text="EKLE" />
       <Button layoutX="664.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="SIL" />
    </children>
 </AnchorPane>

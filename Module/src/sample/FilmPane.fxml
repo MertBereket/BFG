@@ -15,7 +15,6 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane prefHeight="720.0" prefWidth="994.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FilmPane">
    <children>
       <VBox layoutX="719.0" prefHeight="720.0" prefWidth="275.0" style="-fx-background-color: #C2BF00;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="719.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
@@ -172,7 +171,7 @@
             </Label>
          </children>
       </HBox>
-      <Button layoutX="609.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="EKLE" />
+      <Button layoutX="609.0" layoutY="-1.0" mnemonicParsing="false" onAction="#AddNewButtonClicked" prefHeight="25.0" prefWidth="55.0" text="EKLE" />
       <Button layoutX="664.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="SIL" />
    </children>
 </AnchorPane>
