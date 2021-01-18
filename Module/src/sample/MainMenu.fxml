@@ -10,7 +10,7 @@
    <children>
       <AnchorPane prefHeight="720.0" prefWidth="286.0" style="-fx-background-color: #37493E;">
          <children>
-            <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="260.0" text="Kullanici" textFill="WHITE" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
+            <Label fx:id="userlabel" alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="17.0" prefWidth="260.0" text="Hoş Geldiniz" textFill="WHITE" AnchorPane.leftAnchor="12.0" AnchorPane.rightAnchor="12.0" AnchorPane.topAnchor="14.0">
                <font>
                   <Font name="Arial" size="23.0" />
                </font>

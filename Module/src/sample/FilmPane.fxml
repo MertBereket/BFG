@@ -98,11 +98,12 @@
             </BorderPane>
          </children>
       </VBox>
-      <TableView layoutY="24.0" prefHeight="431.0" prefWidth="720.0" style="-fx-background-color: #76959A;">
-        <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
-        </columns>
+      <TableView id="filmtable" layoutY="24.0" prefHeight="431.0" prefWidth="720.0" style="-fx-background-color: #76959A;">
+         <columns>
+            <TableColumn fx:id="studentId" prefWidth="75.0" text="StudentId" />
+            <TableColumn fx:id="firstName" prefWidth="75.0" text="First Name" />
+            <TableColumn fx:id="lastName" prefWidth="75.0" text="Last Name" />
+         </columns>
       </TableView>
       <TextArea layoutY="573.0" prefHeight="147.0" prefWidth="720.0" />
       <TextField layoutY="-1.0" prefHeight="25.0" prefWidth="556.0" />

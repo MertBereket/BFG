@@ -15,14 +15,14 @@
             <Font name="Arial" size="24.0" />
          </font>
       </Label>
-      <TextField layoutX="415.0" layoutY="108.0" prefHeight="25.0" prefWidth="286.0" />
+      <TextField fx:id="username" layoutX="415.0" layoutY="108.0" prefHeight="25.0" prefWidth="286.0" />
       <Label layoutX="415.0" layoutY="147.0" prefHeight="27.0" prefWidth="152.0" text="Sifre" textAlignment="CENTER" textFill="WHITE">
          <font>
             <Font name="Arial" size="24.0" />
          </font>
       </Label>
-      <TextField layoutX="415.0" layoutY="187.0" prefHeight="25.0" prefWidth="286.0" />
-      <Button layoutX="415.0" layoutY="238.0" mnemonicParsing="false" prefHeight="42.0" prefWidth="286.0" text="Giriş Yap" textAlignment="CENTER">
+      <TextField fx:id="pasword" layoutX="415.0" layoutY="187.0" prefHeight="25.0" prefWidth="286.0" />
+      <Button layoutX="415.0" layoutY="238.0" mnemonicParsing="false" onAction="#LoginButtonClicked" prefHeight="42.0" prefWidth="286.0" text="Giriş Yap" textAlignment="CENTER">
          <font>
             <Font size="19.0" />
          </font>
