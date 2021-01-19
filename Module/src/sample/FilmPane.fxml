@@ -3,7 +3,6 @@
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -15,16 +14,16 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="994.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.FilmPane">
+<AnchorPane prefHeight="720.0" prefWidth="994.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SecPaneController">
    <children>
       <VBox layoutX="719.0" prefHeight="720.0" prefWidth="275.0" style="-fx-background-color: #C2BF00;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="719.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
-            <Label alignment="CENTER" prefHeight="42.0" prefWidth="275.0" text="MovieTitle" textFill="WHITE">
+            <Label fx:id="label_title" alignment="CENTER" prefHeight="42.0" prefWidth="275.0" text="MovieTitle" textFill="WHITE">
                <font>
                   <Font name="Arial" size="25.0" />
                </font>
             </Label>
-            <ImageView fitHeight="197.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true">
+            <ImageView fx:id="imageView_poster" fitHeight="197.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../../Desktop/AjTtJNumZyUDz33VtMlF1K8JPsE.jpg" />
                </image>
@@ -37,7 +36,7 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="26.0" prefWidth="275.0" text="Label" textFill="WHITE">
+            <Label fx:id="label_relasedate" alignment="CENTER" prefHeight="26.0" prefWidth="275.0" text="Label" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
@@ -47,14 +46,14 @@
                   <Font size="18.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="26.0" prefWidth="275.0" text="Label" textFill="WHITE">
+            <Label fx:id="label_tmdbrating" alignment="CENTER" prefHeight="26.0" prefWidth="275.0" text="Label" textFill="WHITE">
                <font>
                   <Font size="18.0" />
                </font>
             </Label>
             <BorderPane prefHeight="200.0" prefWidth="275.0">
                <right>
-                  <ImageView fitHeight="150.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                  <ImageView fx:id="imageView_director" fitHeight="150.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
                         <Insets right="10.0" />
                      </BorderPane.margin>
@@ -64,7 +63,7 @@
                   </ImageView>
                </right>
                <left>
-                  <Label prefHeight="17.0" prefWidth="117.0" text="Director" BorderPane.alignment="CENTER">
+                  <Label fx:id="label_director" prefHeight="17.0" prefWidth="117.0" text="Director" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
                         <Insets left="10.0" />
                      </BorderPane.margin>
@@ -76,7 +75,7 @@
             </BorderPane>
             <BorderPane prefHeight="200.0" prefWidth="275.0">
                <right>
-                  <ImageView fitHeight="150.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
+                  <ImageView fx:id="imageView_actor" fitHeight="150.0" fitWidth="116.0" pickOnBounds="true" preserveRatio="true" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
                         <Insets right="10.0" />
                      </BorderPane.margin>
@@ -86,7 +85,7 @@
                   </ImageView>
                </right>
                <left>
-                  <Label prefHeight="17.0" prefWidth="117.0" text="Actor" BorderPane.alignment="CENTER">
+                  <Label fx:id="label_actor" prefHeight="17.0" prefWidth="117.0" text="Actor" BorderPane.alignment="CENTER">
                      <BorderPane.margin>
                         <Insets left="10.0" />
                      </BorderPane.margin>
@@ -98,16 +97,13 @@
             </BorderPane>
          </children>
       </VBox>
-      <TableView id="filmtable" layoutY="24.0" prefHeight="431.0" prefWidth="720.0" style="-fx-background-color: #76959A;">
+      <TableView id="filmtable" fx:id="tableView" layoutY="24.0" prefHeight="431.0" prefWidth="720.0" style="-fx-background-color: #76959A;">
          <columns>
-            <TableColumn fx:id="studentId" prefWidth="75.0" text="StudentId" />
-            <TableColumn fx:id="firstName" prefWidth="75.0" text="First Name" />
-            <TableColumn fx:id="lastName" prefWidth="75.0" text="Last Name" />
          </columns>
       </TableView>
-      <TextArea layoutY="573.0" prefHeight="147.0" prefWidth="720.0" />
-      <TextField layoutY="-1.0" prefHeight="25.0" prefWidth="556.0" />
-      <Button layoutX="554.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="ARA" />
+      <TextArea fx:id="textArea_review" layoutY="573.0" prefHeight="147.0" prefWidth="720.0" wrapText="true" />
+      <TextField fx:id="searchtext" layoutY="-1.0" prefHeight="25.0" prefWidth="556.0" />
+      <Button fx:id="button_find" layoutX="554.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="ARA" />
       <HBox layoutY="455.0" prefHeight="59.0" prefWidth="720.0" style="-fx-background-color: #C2BF00;">
          <children>
             <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="HİKAYE" underline="true">
@@ -142,7 +138,7 @@
       </HBox>
       <HBox layoutY="514.0" prefHeight="59.0" prefWidth="720.0" style="-fx-background-color: #C2BF00;">
          <children>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE">
+            <Label fx:id="label_story" alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
@@ -150,29 +146,29 @@
                   <Insets left="35.0" />
                </HBox.margin>
             </Label>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE">
+            <Label fx:id="label_acting" alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE">
+            <Label fx:id="label_editing" alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE">
+            <Label fx:id="label_music" alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
-            <Label alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE">
+            <Label fx:id="label_average" alignment="CENTER" prefHeight="17.0" prefWidth="133.0" text="Label" textFill="WHITE">
                <font>
                   <Font size="20.0" />
                </font>
             </Label>
          </children>
       </HBox>
-      <Button layoutX="609.0" layoutY="-1.0" mnemonicParsing="false" onAction="#AddNewButtonClicked" prefHeight="25.0" prefWidth="55.0" text="EKLE" />
-      <Button layoutX="664.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="SIL" />
+      <Button fx:id="button_addnew" layoutX="609.0" layoutY="-1.0" mnemonicParsing="false" onAction="#AddNewButtonClicked" prefHeight="25.0" prefWidth="55.0" text="EKLE" />
+      <Button fx:id="button_delete" layoutX="664.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="SIL" />
    </children>
 </AnchorPane>

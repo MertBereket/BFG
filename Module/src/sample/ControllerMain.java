@@ -33,7 +33,7 @@ public class ControllerMain {
         JSONObject object = new JSONObject();
         object.put("UserName",username.getText());
         object.put("Pasword",pasword.getText());
-        JSONObject user = new BfgReviewApi.SignupUser().SignInJsonObject(object);
+        JSONObject user = new BfgReviewApi.UserMethods().SignInJsonObject(object);
         if (user!=null)
         {
             System.out.println("Succes!");

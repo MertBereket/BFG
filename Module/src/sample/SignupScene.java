@@ -33,7 +33,7 @@ public class SignupScene {
         object.put("Email",email.getText());
         object.put("UserName",username.getText());
         object.put("Pasword",pasword.getText());
-        new BfgReviewApi.SignupUser().SignUpUserJsonObject(object);
+        new BfgReviewApi.UserMethods().SignUpUserJsonObject(object);
         Parent parent = FXMLLoader.load(getClass().getResource("MainMenu.fxml"));
         Scene scene = new Scene(parent);
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
