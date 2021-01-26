@@ -123,6 +123,7 @@ public class UserMovie {
     public SimpleStringProperty DateWatched;
     public SimpleStringProperty Review;
     public int tmdbid;
+    public float avrg;
 
     public int getTmdbid() {
         return tmdbid;
@@ -130,5 +131,9 @@ public class UserMovie {
 
     public void setTmdbid(int tmdbid) {
         this.tmdbid = tmdbid;
+    }
+
+    public float getAvrg() {
+        return (this.story.floatValue()+this.editing.getValue()+this.music.getValue()+this.acting.getValue())/4;
     }
 }

@@ -25,11 +25,6 @@
                   <Font name="Arial" size="22.0" />
                </font>
             </Button>
-            <Button alignment="CENTER" layoutX="12.0" layoutY="311.0" mnemonicParsing="false" onAction="#loadGamePane" prefHeight="60.0" prefWidth="262.0" text="Oyunlar">
-               <font>
-                  <Font name="Arial" size="22.0" />
-               </font>
-            </Button>
             <Button alignment="CENTER" layoutX="12.0" layoutY="646.0" mnemonicParsing="false" onAction="#ExitButtonClicked" prefHeight="60.0" prefWidth="262.0" text="Cikis Yap">
                <font>
                   <Font name="Arial" size="22.0" />

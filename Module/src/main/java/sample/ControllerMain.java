@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
 import org.json.simple.JSONObject;
@@ -46,7 +47,8 @@ public class ControllerMain {
         }
         else
         {
-            System.out.println("Hatali Giris!");
+            System.out.println("AAA");
+            showAlert();
         }
     }
     public void DebugButtonClicked(ActionEvent event) throws IOException
@@ -56,5 +58,12 @@ public class ControllerMain {
         Stage window = (Stage) ((Node)event.getSource()).getScene().getWindow();
         window.setScene(scene);
         window.show();
+    }
+    public void showAlert() {
+        Alert alert = new Alert(Alert.AlertType.ERROR);
+        alert.setTitle("HATA");
+        alert.setHeaderText("Kayitli Kullanici Bulunamadi!");
+        alert.setContentText("Girdiginiz kullanici adi veya sifre yanlis");
+        alert.showAndWait();
     }
 }

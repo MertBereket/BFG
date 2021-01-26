@@ -6,7 +6,6 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -24,9 +23,6 @@
                </font>
             </Label>
             <ImageView fx:id="imageView_poster" fitHeight="197.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../Desktop/AjTtJNumZyUDz33VtMlF1K8JPsE.jpg" />
-               </image>
                <VBox.margin>
                   <Insets left="72.0" />
                </VBox.margin>
@@ -57,9 +53,6 @@
                      <BorderPane.margin>
                         <Insets right="10.0" />
                      </BorderPane.margin>
-                     <image>
-                        <Image url="@../../../../Desktop/1gjcpAa99FAOWGnrUvHEXXsRs7o.jpg" />
-                     </image>
                   </ImageView>
                </right>
                <left>
@@ -79,9 +72,6 @@
                      <BorderPane.margin>
                         <Insets right="10.0" />
                      </BorderPane.margin>
-                     <image>
-                        <Image url="@../../../../Desktop/1gjcpAa99FAOWGnrUvHEXXsRs7o.jpg" />
-                     </image>
                   </ImageView>
                </right>
                <left>
@@ -102,7 +92,7 @@
          </columns>
       </TableView>
       <TextArea fx:id="textArea_review" layoutY="573.0" prefHeight="147.0" prefWidth="720.0" wrapText="true" />
-      <TextField fx:id="searchtext" layoutY="-1.0" prefHeight="25.0" prefWidth="556.0" />
+      <TextField fx:id="searchtext" layoutX="45.0" layoutY="-1.0" prefHeight="25.0" prefWidth="511.0" />
       <Button fx:id="button_find" layoutX="554.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="ARA" />
       <HBox layoutY="455.0" prefHeight="59.0" prefWidth="720.0" style="-fx-background-color: #C2BF00;">
          <children>
@@ -170,5 +160,6 @@
       </HBox>
       <Button fx:id="button_addnew" layoutX="609.0" layoutY="-1.0" mnemonicParsing="false" onAction="#AddNewButtonClicked" prefHeight="25.0" prefWidth="55.0" text="EKLE" />
       <Button fx:id="button_delete" layoutX="664.0" layoutY="-1.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="55.0" text="SIL" />
+      <Button layoutY="-1.0" mnemonicParsing="false" onAction="#SuggestButtonClicked" text="Öneri" />
    </children>
 </AnchorPane>

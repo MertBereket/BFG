@@ -32,24 +32,20 @@ public class MainMenu {
     Label userlabel;
     public void loadFilmPane (javafx.event.ActionEvent event) throws IOException  {
         Node node = (Node) event.getSource();
-
         Stage stage = (Stage) node.getScene().getWindow();
         Scene scene = stage.getScene();
-        //TableView table = (TableView) scene.lookup("filmtable");
-        //table.getColumns().clear();
         JSONObject user = (JSONObject) stage.getUserData();
         userlabel.setText(user.get("Name")+" "+user.get("Surname"));
         Pane newLoadedPane =  FXMLLoader.load(getClass().getResource("Filmpane.fxml"));
-        //List<Node> parentChildren = ((Pane)secPane.getParent()).getChildren();
-
         secPane.getChildren().add(newLoadedPane);
     }
     public void loadTvPane (javafx.event.ActionEvent event) throws IOException  {
+        Node node = (Node) event.getSource();
+        Stage stage = (Stage) node.getScene().getWindow();
+        Scene scene = stage.getScene();
+        JSONObject user = (JSONObject) stage.getUserData();
+        userlabel.setText(user.get("Name")+" "+user.get("Surname"));
         Pane newLoadedPane =  FXMLLoader.load(getClass().getResource("TvSeriesPane.fxml"));
-        secPane.getChildren().add(newLoadedPane);
-    }
-    public void loadGamePane (javafx.event.ActionEvent event) throws IOException  {
-        Pane newLoadedPane =  FXMLLoader.load(getClass().getResource("GamesPane.fxml"));
         secPane.getChildren().add(newLoadedPane);
     }
 }

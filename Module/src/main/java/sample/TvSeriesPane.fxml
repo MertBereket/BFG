@@ -6,7 +6,6 @@
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
@@ -14,7 +13,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="720.0" prefWidth="994.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SecPaneController">
+<AnchorPane prefHeight="720.0" prefWidth="994.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.SeriesPaneController">
    <children>
       <VBox layoutX="719.0" prefHeight="720.0" prefWidth="275.0" style="-fx-background-color: #C2BF00;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="719.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
          <children>
@@ -24,9 +23,6 @@
                </font>
             </Label>
             <ImageView fx:id="imageView_poster" fitHeight="197.0" fitWidth="154.0" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../../../../Desktop/AjTtJNumZyUDz33VtMlF1K8JPsE.jpg" />
-               </image>
                <VBox.margin>
                   <Insets left="72.0" />
                </VBox.margin>
@@ -57,9 +53,6 @@
                      <BorderPane.margin>
                         <Insets right="10.0" />
                      </BorderPane.margin>
-                     <image>
-                        <Image url="@../../../../Desktop/1gjcpAa99FAOWGnrUvHEXXsRs7o.jpg" />
-                     </image>
                   </ImageView>
                </right>
                <left>
@@ -79,9 +72,6 @@
                      <BorderPane.margin>
                         <Insets right="10.0" />
                      </BorderPane.margin>
-                     <image>
-                        <Image url="@../../../../Desktop/1gjcpAa99FAOWGnrUvHEXXsRs7o.jpg" />
-                     </image>
                   </ImageView>
                </right>
                <left>
@@ -97,7 +87,7 @@
             </BorderPane>
          </children>
       </VBox>
-      <TableView id="dizitable" fx:id="tableView" layoutY="24.0" prefHeight="431.0" prefWidth="720.0" style="-fx-background-color: #76959A;">
+      <TableView id="dizitable" fx:id="seriestableView" layoutY="24.0" prefHeight="431.0" prefWidth="720.0" style="-fx-background-color: #76959A;">
          <columns>
          </columns>
       </TableView>
