@@ -18,7 +18,7 @@ def hello_world():
 def word_test():
     w = request.args['word']
     try:
-        return jsonify(json.loads(genre_recommendations(w).head(20).to_json()))
+        return jsonify(json.loads(genre_recommendations(w).head(30).to_json()))
     except KeyError:
         return jsonify({
             'message': 'Not found movie!!',
