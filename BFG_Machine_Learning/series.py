@@ -2,9 +2,9 @@ import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
 
-movies = pd.read_csv('Mlmovies.csv', encoding='latin-1', usecols=['Title', 'Genre1', 'Keywords'])
+movies = pd.read_csv('Mlseries.csv', encoding='latin-1', usecols=['Title', 'Genre1', 'Keywords'])
 
-movieTitles = pd.read_csv('Mlmovies.csv', encoding='latin-1', usecols=['Title'])
+movieTitles = pd.read_csv('Mlseries.csv', encoding='latin-1', usecols=['Title'])
 
 # Break up the big genre string into a string array
 movies['Keywords'] = movies['Keywords'].str.split('|')
@@ -27,7 +27,7 @@ indices = pd.Series(movies.index, index=movies['Title'])
 
 
 # Function that get movie recommendations based on the cosine similarity score of movie genres
-def movies_recommendations(title):
+def series_recommendations(title):
     idx = indices[title]
     sim_scores = list(enumerate(cosine_sim[idx]))
     sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
