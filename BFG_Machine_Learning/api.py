@@ -1,10 +1,11 @@
-import os
-import re
-import json
+from flask import Flask, jsonify, request
 from flask_cors import CORS
-from flask import Flask, jsonify, request, url_for
-from movie import movies_recommendations
-from series import series_recommendations
+
+from generic_recommendation import GenericRecommendations
+
+
+series_rec = GenericRecommendations('Mlseries.csv')
+movies_rec = GenericRecommendations('Mlmovies.csv')
 
 app = Flask(__name__)
 CORS(app)
@@ -19,23 +20,41 @@ def hello_world():
 def movies_test():
     w = request.args['word']
     try:
-        return jsonify(json.loads(movies_recommendations(w).head(20).to_json()))
-    except KeyError:
+        return jsonify(movies_rec.recommendations((w, "Not Found Movies!")))
+    except Exception as error:
         return jsonify({
-            'message': 'Not found movie!!',
-            'status': 404
+            'message': str(error),
+            'status': 503
         })
+
 
 @app.route('/series')
 def series_test():
     w = request.args['word']
     try:
-        return jsonify(json.loads(series_recommendations(w).head(20).to_json()))
-    except KeyError:
+        return jsonify(series_rec.recommendations((w, "Not Found Series!")))
+    except Exception as error:
         return jsonify({
-            'message': 'Not found movie!!',
-            'status': 404
+            'message': str(error),
+            'status': 503
         })
+
+
+@app.route('/all')
+def all_test():
+    w = request.args['word']
+
+    try:
+        return jsonify({
+                'Series': series_rec.recommendations(w, "Not Found Series!"),
+                'Movies': movies_rec.recommendations(w, "Not Fount Movies!")
+        })
+    except Exception as error:
+        return jsonify({
+            'message': str(error),
+            'status': 503
+        })
+
 
 if __name__ == '__main__':
     app.run(debug=True)

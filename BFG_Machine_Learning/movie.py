@@ -1,3 +1,4 @@
+import json
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import linear_kernel
@@ -28,9 +29,12 @@ indices = pd.Series(movies.index, index=movies['Title'])
 
 # Function that get movie recommendations based on the cosine similarity score of movie genres
 def movies_recommendations(title):
-    idx = indices[title]
-    sim_scores = list(enumerate(cosine_sim[idx]))
-    sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
-    sim_scores = sim_scores[1:21]
-    movie_indices = [i[0] for i in sim_scores]
-    return titles.iloc[movie_indices]
+    try:
+        idx = indices[title]
+        sim_scores = list(enumerate(cosine_sim[idx]))
+        sim_scores = sorted(sim_scores, key=lambda x: x[1], reverse=True)
+        sim_scores = sim_scores[1:21]
+        movie_indices = [i[0] for i in sim_scores]
+        return json.loads(titles.iloc[movie_indices].head(10).to_json())
+    except Exception as error:
+        return 'Not Found Movies! | error' + str(error)
